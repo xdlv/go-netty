@@ -19,6 +19,7 @@ package netty
 import (
 	"context"
 	"fmt"
+	"log"
 	"sync"
 
 	"github.com/go-netty/go-netty/transport"
@@ -39,6 +40,8 @@ type Bootstrap interface {
 
 // NewBootstrap create a new Bootstrap with default config.
 func NewBootstrap(option ...Option) Bootstrap {
+
+	log.Println("---- add by xd-------")
 
 	opts := &bootstrapOptions{
 		channelIDFactory: SequenceID(),
